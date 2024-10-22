@@ -5,6 +5,9 @@ $(document).ready(function() {
             dataType: "json",
             method: "GET",
             success: data => render(data)
+        },
+        error: function(xhr, status, error) {
+            console.error('Error:', error); // Handle errors
         })
     })
     
